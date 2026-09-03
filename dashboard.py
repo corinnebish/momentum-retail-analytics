@@ -212,6 +212,49 @@ with tab1:
             unsafe_allow_html=True,
         )
 
+    col_c, col_d = st.columns(2)
+    with col_c:
+        st.subheader("Sales by Region")
+        region_sales = filtered.groupby("Region")["Sales"].sum().sort_values(ascending=False).reset_index()
+        fig = px.bar(
+            region_sales, x="Region", y="Sales", color="Region",
+            color_discrete_sequence=ACCENT_COLORS, template=PLOTLY_TEMPLATE, text_auto=".2s",
+        )
+        fig.update_layout(
+            showlegend=False, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+            font=dict(color="#f8f4ff", size=13), xaxis=dict(gridcolor="rgba(255,255,255,0.18)", tickfont=dict(color="#f8f4ff"), title_font=dict(color="#f8f4ff")),
+            yaxis=dict(gridcolor="rgba(255,255,255,0.18)", tickfont=dict(color="#f8f4ff"), title_font=dict(color="#f8f4ff")),
+        )
+        st.plotly_chart(fig, use_container_width=True)
+        st.markdown(
+            '<div class="insight-box">💡 The <b>West</b> and <b>East</b> regions consistently outsell '
+            '<b>Central</b> and <b>South</b> — worth checking whether that gap is store count or demand.</div>',
+            unsafe_allow_html=True,
+        )
+
+    with col_d:
+        st.subheader("Discount vs. Profit by Category")
+        fig = px.scatter(
+            filtered, x="Discount", y="Profit", color="Category",
+            color_discrete_sequence=ACCENT_COLORS, template=PLOTLY_TEMPLATE,
+            opacity=0.55, trendline="ols", trendline_scope="overall",
+        )
+        fig.update_traces(marker=dict(size=6))
+        fig.update_layout(
+            paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+            font=dict(color="#f8f4ff", size=13), xaxis=dict(gridcolor="rgba(255,255,255,0.18)", tickfont=dict(color="#f8f4ff"), title_font=dict(color="#f8f4ff")),
+            yaxis=dict(gridcolor="rgba(255,255,255,0.18)", tickfont=dict(color="#f8f4ff"), title_font=dict(color="#f8f4ff")),
+            legend=dict(font=dict(color="#f8f4ff")),
+        )
+        st.plotly_chart(fig, use_container_width=True)
+        st.markdown(
+            '<div class="insight-box">💡 Profit drops sharply as discount rises past ~20-40%. '
+            '<b>Furniture</b> loses money systemically here (1 in 3 orders, only 2.6% margin), while '
+            '<b>Technology</b> has the single worst loss on record (-$6,600 at 70% off) but stays highly '
+            'profitable overall (17.4% margin) — an outlier, not a pattern.</div>',
+            unsafe_allow_html=True,
+        )
+
 with tab2:
     rfm = pd.read_csv("customers_with_clusters.csv")
     rfm["Segment"] = rfm["Cluster"].map(SEGMENT_NAMES)
