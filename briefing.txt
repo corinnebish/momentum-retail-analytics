@@ -1,0 +1,56 @@
+MOMENTUM RETAIL — VP OF STRATEGY BRIEFING
+Five-Minute Verbal Briefing Notes
+
+1. OPENING
+We set out to understand who our customers are, which ones deserve
+different treatment, and where revenue is heading over the next
+six months — using four years of transaction data.
+
+2. KEY FINDINGS
+- Furniture and Technology sell similar amounts ($750K vs $840K),
+  but Furniture converts almost none of it to profit — a 2.6% margin
+  versus Technology's 17.4%. The difference isn't demand, it's discounting:
+  once a Furniture order is discounted past 20%, it's usually unprofitable,
+  and a full third of Furniture orders lose money outright.
+- Technology has the single worst loss on any one order (-$6,600, on a
+  70%-discounted item), but that's a one-off outlier absorbed by a
+  category that's still highly profitable overall. Furniture's problem is
+  systemic, not a bad outlier — that's the more urgent fix.
+- Revenue is heavily seasonal: November and December are consistently
+  the two biggest months every year, roughly 3-4x a slow month like
+  February. The business's full-year performance rides on the holidays.
+
+3. CUSTOMER SEGMENTS
+We grouped customers into four segments using RFM scoring (Recency,
+Frequency, Monetary) and K-Means clustering:
+
+- Champions (67 customers): buy often and spend far more than anyone
+  else, ~$9,450 on average. Action: give them VIP treatment — early
+  access, loyalty perks — and protect the relationship. Losing one of
+  these customers costs more than losing dozens of average ones.
+- Loyal Regulars (294 customers, our largest group): order just as
+  often as Champions but spend about a third as much per relationship.
+  Action: upsell and cross-sell — they're already engaged, we just need
+  to grow their basket size.
+- Average / Occasional (340 customers): middle of the road on every
+  metric. Action: standard nurture campaigns, low marketing priority.
+- At-Risk Dormant (103 customers): haven't ordered in about 18 months.
+  Action: launch a win-back campaign now, before we lose them for good.
+
+4. REVENUE FORECAST
+Using Holt-Winters exponential smoothing on four years of monthly sales,
+revenue has grown roughly 20-30% per year recently, with one dip in 2020.
+Our six-month forecast (Jan-Jun 2023) projects about $364,000 in total
+revenue, following the same seasonal dip-then-climb pattern seen every
+prior year. The key risk: because so much of our annual performance
+depends on the Nov-Dec peak, an underperforming holiday season would
+drag the full year down disproportionately — that's the one number
+leadership should watch most closely.
+
+5. RECOMMENDED NEXT STEPS
+- Cap Furniture discounts at 20% or restructure Furniture pricing —
+  it's the single biggest drag on category profitability.
+- Launch a targeted win-back campaign for the 103 At-Risk Dormant
+  customers before the holiday season, when re-engagement matters most.
+- Build a churn-risk model on top of the RFM segments to flag which
+  At-Risk customers are most worth pursuing versus writing off.
