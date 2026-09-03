@@ -43,7 +43,3 @@ Playing the role of an analyst reporting to a VP of Strategy at a fictional reta
 uv run streamlit run dashboard.py
 ```
 Opens at `http://localhost:8501`.
-
-## Background
-
-Built as a solo capstone project for USC's MSBA program (Class of Spring 2026), applying methods from coursework in machine learning (K-Means), data visualization, SQL, and business storytelling to a realistic end-to-end analytics workflow.
