@@ -2,7 +2,7 @@
 
 **A retail analytics project demonstrating the full data analyst workflow: exploratory analysis, customer segmentation, revenue forecasting, dashboard design, and business storytelling.**
 
-Playing the role of an analyst reporting to a VP of Strategy at a fictional retail company, I used four years of real-world-style transaction data (the Tableau Sample Superstore dataset — 10,194 orders, 804 customers) to answer three questions leadership actually asks: *What does our customer base look like? Which customers deserve different treatment? Where is revenue heading?*
+This project uses four years of real-world-style transaction data (the Tableau Sample Superstore dataset — 10,194 orders, 804 customers) to answer three questions leadership actually asks: *What does our customer base look like? Which customers deserve different treatment? Where is revenue heading?*
 
 ## Skills Demonstrated
 
@@ -32,7 +32,7 @@ Playing the role of an analyst reporting to a VP of Strategy at a fictional reta
 | `rfm_segmentation.py` | Scores every customer on Recency/Frequency/Monetary, scales the features, and clusters them into 4 segments with K-Means |
 | `forecasting.py` | Fits a Holt-Winters model (trend + 12-month seasonality) and forecasts the next 6 months of revenue |
 | `dashboard.py` | Interactive Streamlit dashboard — sidebar filters (date, category, region) driving 3 tabs: Sales Overview, Customer Segments, Revenue Forecast |
-| `briefing.txt` | The 5-minute business narrative written for the VP audience — no jargon |
+| `briefing.txt` | The 5-minute business narrative, written for a non-technical audience — no jargon |
 | `customers_with_clusters.csv` | Full segmentation output, one row per customer |
 
 **Tools:** Python, pandas, scikit-learn, statsmodels, Plotly, Streamlit, DuckDB, Claude Code (AI pair-programming assistant — I directed every analytical decision; Claude handled implementation).
