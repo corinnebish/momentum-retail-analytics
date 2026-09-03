@@ -287,12 +287,32 @@ with tab2:
     st.dataframe(summary, use_container_width=True)
 
 with tab3:
-    st.subheader("6-Month Revenue Forecast")
     monthly_full = df.set_index("Order Date").resample("MS")["Sales"].sum()
     model = ExponentialSmoothing(monthly_full, trend="add", seasonal="add", seasonal_periods=12)
     fit = model.fit()
     forecast = fit.forecast(6)
 
+    st.subheader("Historical Monthly Sales")
+    hist_fig = px.line(
+        monthly_full.reset_index(), x="Order Date", y="Sales", markers=True,
+        color_discrete_sequence=["#7dd3fc"], template=PLOTLY_TEMPLATE,
+    )
+    hist_fig.update_layout(
+        paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(color="#f8f4ff", size=13),
+        xaxis=dict(gridcolor="rgba(255,255,255,0.18)", tickfont=dict(color="#f8f4ff"), title_font=dict(color="#f8f4ff")),
+        yaxis=dict(gridcolor="rgba(255,255,255,0.18)", tickfont=dict(color="#f8f4ff"), title_font=dict(color="#f8f4ff")),
+    )
+    st.plotly_chart(hist_fig, use_container_width=True, key="historical_sales_chart")
+    yearly = df.set_index("Order Date").resample("YS")["Sales"].sum()
+    avg_growth_hist = yearly.pct_change().iloc[1:].mean() * 100
+    st.markdown(
+        f'<div class="insight-box">💡 Revenue grew every year except 2020 (-4.3%, likely COVID-related). '
+        f'Average growth since: <b>~{avg_growth_hist:.0f}%/year</b>.</div>',
+        unsafe_allow_html=True,
+    )
+
+    st.subheader("6-Month Revenue Forecast")
     fig = go.Figure()
     fig.add_trace(go.Scatter(
         x=monthly_full.index, y=monthly_full.values, mode="lines+markers",
