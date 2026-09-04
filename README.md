@@ -37,6 +37,12 @@ This project uses four years of real-world-style transaction data (the Tableau S
 
 **Tools:** Python, pandas, scikit-learn, statsmodels, Plotly, Streamlit, DuckDB, Claude Code (AI pair-programming assistant — I directed every analytical decision; Claude handled implementation).
 
+## Requirements
+
+- Python 3.12 or newer
+- uv for installing and running the project
+- Python packages listed in `pyproject.toml`: DuckDB, matplotlib, openpyxl, pandas, Plotly, scikit-learn, seaborn, statsmodels, and Streamlit
+
 ## Run the Dashboard
 
 ```bash
