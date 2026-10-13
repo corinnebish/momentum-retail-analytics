@@ -2,7 +2,7 @@
 
 ### 👉 [**View the live dashboard**](https://momentum-retail-analytics-228994007025.us-central1.run.app) - no setup required, just click.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://momentum-retail-analytics-228994007025.us-central1.run.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-2ea44f?style=for-the-badge)](https://momentum-retail-analytics-228994007025.us-central1.run.app)
 
 **A retail analytics project demonstrating the full data analyst workflow: exploratory analysis, customer segmentation, revenue forecasting, dashboard design, and business storytelling.**
 
