@@ -1,8 +1,8 @@
 # Momentum Retail - Strategic Overview
 
-### 👉 [**View the live dashboard**](https://momentum-retail-analytics.streamlit.app) - no setup required, just click.
+### 👉 [**View the live dashboard**](https://momentum-retail-analytics-228994007025.us-central1.run.app) - no setup required, just click.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://momentum-retail-analytics.streamlit.app)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://momentum-retail-analytics-228994007025.us-central1.run.app)
 
 **A retail analytics project demonstrating the full data analyst workflow: exploratory analysis, customer segmentation, revenue forecasting, dashboard design, and business storytelling.**
 
@@ -12,7 +12,7 @@ This project uses four years of real-world-style transaction data (the Tableau S
 
 ## The Dashboard
 
-An interactive Streamlit app with sidebar filters (date, category, region) driving three tabs. **[Explore it live here.](https://momentum-retail-analytics.streamlit.app)**
+An interactive Streamlit app with sidebar filters (date, category, region) driving three tabs. **[Explore it live here.](https://momentum-retail-analytics-228994007025.us-central1.run.app)**
 
 | Sales Overview | Customer Segments |
 |---|---|
@@ -59,7 +59,7 @@ An interactive Streamlit app with sidebar filters (date, category, region) drivi
 
 ## Run It Locally (optional - for developers)
 
-Most people just want the [live dashboard](https://momentum-retail-analytics.streamlit.app). If you'd rather run it yourself:
+Most people just want the [live dashboard](https://momentum-retail-analytics-228994007025.us-central1.run.app). If you'd rather run it yourself:
 
 **Requirements**
 - Python 3.12 or newer
